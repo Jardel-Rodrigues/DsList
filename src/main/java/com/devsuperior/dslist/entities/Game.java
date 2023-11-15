@@ -21,7 +21,7 @@ public class Game implements Serializable {
 	private String title;
 
 	@Column(name = "game_year")
-	private String yaer;
+	private Integer yaer;
 	private String genre;
 	private String platforms;
 	private String imgUrl;
@@ -35,7 +35,7 @@ public class Game implements Serializable {
 
 	}
 
-	public Game(Long id, String title, String yaer, String genre, String platforms, String score, String imgUrl,
+	public Game(Long id, String title, Integer yaer, String genre, String platforms, String score, String imgUrl,
 			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
@@ -64,11 +64,11 @@ public class Game implements Serializable {
 		this.title = title;
 	}
 
-	public String getYaer() {
+	public Integer getYaer() {
 		return yaer;
 	}
 
-	public void setYaer(String yaer) {
+	public void setYaer(Integer yaer) {
 		this.yaer = yaer;
 	}
 
